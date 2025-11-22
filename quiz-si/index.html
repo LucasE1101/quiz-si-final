@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Quiz Interativo – Sistemas Inteligentes</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- TELA DE INÍCIO -->
+    <div id="startScreen">
+        <h1>Quiz Interativo – Sistemas Inteligentes</h1>
+        <h2>Alunos: Lucas Emanuel e Victor Ary</h2>
+
+        <img src="inicio.jpg" alt="Imagem de Introdução" class="intro-img">
+
+        <p style="text-align:center; font-size:18px;">
+            Sistemas Inteligentes são tecnologias capazes de aprender, reconhecer padrões,
+            analisar informações e tomar decisões. Eles estão presentes em assistentes virtuais,
+            carros autônomos, sistemas de recomendação e muito mais. <br><br>
+            Clique abaixo para começar o quiz!
+        </p>
+
+        <button id="startBtn" onclick="iniciarQuiz()">Iniciar Quiz</button>
+    </div>
+
+    <!-- TELA DO QUIZ -->
+    <div id="quizScreen">
+        <h1>Quiz – Sistemas Inteligentes</h1>
+
+        <!-- Barra de Progresso -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div id="quiz"></div>
+
+        <!-- Botão FINALIZAR -->
+        <button id="finishBtn" onclick="finalizarQuiz()">Finalizar Quiz</button>
+    </div>
+
+    <!-- TELA DE RESULTADOS -->
+    <div id="resultScreen">
+        <h2>Resultado Final</h2>
+
+        <img src="final.jpg" alt="Imagem Final" class="final-img">
+
+        <p id="pontuacao"></p>
+
+        <button id="restartBtn" onclick="reiniciar()">Reiniciar Quiz</button>
+    </div>
+
+</div>
+
+</body>
+</html>
