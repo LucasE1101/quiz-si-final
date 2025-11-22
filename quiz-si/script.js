@@ -1,3 +1,10 @@
+function embaralharArray(array) {
+    return array
+        .map(item => ({ item, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(obj => obj.item);
+}
+
 const perguntas = [
     {
         enunciado: "1. O que são sistemas inteligentes?",
@@ -150,6 +157,11 @@ const perguntas = [
     }
 ];
 
+// Embaralhar alternativas de cada pergunta
+perguntas.forEach(p => {
+    p.alternativas = embaralharArray(p.alternativas);
+});
+
 
 
 
@@ -265,3 +277,4 @@ function reiniciar() {
 window.onload = () => {
     document.getElementById("startScreen").style.display = "block";
 };
+
